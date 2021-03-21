@@ -1,0 +1,41 @@
+Copy by value:
+ 1. In this, value of variable is directly copied in other variable. But they do not point to the same memory location/address. They are not connected i.e. changes in one variable does not reflect in other.
+
+ 2. Primitive data types are copied by value number,string,boolean
+
+ 3. consider following example;
+
+    var x =17;
+    var y =19;
+    var a = x;
+    var b = y;
+    x = 14
+    y = 20
+    console.log(x,y,a,b);
+
+    output is 14,20,17,19
+
+    here though value of variable x & y changed later, it is not reflected in variable a & b as they do not share the same memory location i.e. they are connected.
+
+Copy by reference:
+
+ 1. In this, value of variable is not directly copied in other variable instead address of memory laction get copied. they do point to the same memory location/address. They are connected i.e. changes in one variable does reflect in other.
+
+ 2. non- Primitive data types are copied by reference i.e. object, array
+
+ 3. consider following example;
+
+    let user:{
+    name: ravi
+    }
+
+    let admin = user;
+
+    admin.name = shyam;
+
+    console.log(user.name);
+
+    output- shyam
+
+    here though we made changes in key of var admin,it is reflected in that of var user as they do share the same memory location i.e. they are connected.
+
